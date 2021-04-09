@@ -75,3 +75,13 @@ body{
     align-items: center;
     justify-content: space-evenly;
 }
+
+.input{
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f0f5;
+    outline: none;
+    margin: 5px;
+    /* padding: 5px 10px; */
+}

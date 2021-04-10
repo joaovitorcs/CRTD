@@ -1,8 +1,8 @@
 function relogio() {
     let horario = new Date();
-    let horas = data.getHours();
-    let minutos = data.getMinutes();
-    let segundos = data.getSeconds();
+    let horas = horario.getHours();
+    let minutos = horario.getMinutes();
+    let segundos = horario.getSeconds();
     let resultado = ``;
 
     if (horas < 10) {

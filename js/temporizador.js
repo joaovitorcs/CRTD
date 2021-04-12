@@ -2,7 +2,6 @@ let contar;
 let horasStyle = document.getElementById('horas');
 let minutosStyle = document.getElementById('minutos');
 let segundosStyle = document.getElementById('segundos');
-let resultado = document.getElementById('contador');
 
 function verificarHoras(n) {
     if (n >= 0 && n <= 10) {
@@ -28,23 +27,26 @@ function verificarSegundos(n) {
     }
 }
 
+function zerarContador(){
+    clearInterval(contar)
+}
+
 function iniciarContador() {
+    zerarContador();
     let horas = document.getElementById('horas').value;
     let minutos = document.getElementById('minutos').value;
     let segundos = document.getElementById('segundos').value;
 
-    console.log(segundos)
-
-    
     contar = setInterval(function temporizador() {
-
-        if (verificarSegundos(segundos)) {
+        if (verificarSegundos(segundos) && verificarMinutos(minutos) && verificarHoras(horas)) {
             segundos = segundos - 1;
             if (segundos == 0 && minutos == 0 && horas == 0){
-                clearInterval(contar);
+                zerarContador();
             }
         }else if (!verificarSegundos(segundos)){
             segundosStyle.style.background = 'red'
+            zerarContador();
+            segundos = 0;
         }
            
         if (verificarHoras(horas)) {
@@ -53,6 +55,8 @@ function iniciarContador() {
             }
         }else if(!verificarHoras(horas)){
             horasStyle.style.background = 'red'
+            zerarContador();
+            horas = 0;
         }
         
         if (verificarMinutos(minutos)) {
@@ -69,11 +73,36 @@ function iniciarContador() {
                     minutos = 59;
                 }
             }
-        }else(
-           minutosStyle.style.background = 'red'
-        )
+        }else if (!verificarMinutos(minutos)){
+            minutosStyle.style.background = 'red'
+            zerarContador();
+            minutos = 0;
+        }
 
-        resultado.innerHTML = `${horas}:${minutos}:${segundos}`;
+        let resultado = ``;
+        function formatarResultado() {
+            if (horas < 10) {
+                resultado += `0${horas}:`;
+            } else {
+                resultado += `${horas}:`;
+            }
+        
+            if (minutos < 10) {
+                resultado += `0${minutos}:`;
+            } else {
+                resultado += `${minutos}:`;
+            }
+        
+            if (segundos < 10) {
+                resultado += `0${segundos}`;
+            } else {
+                resultado += `${segundos}`;
+            }
+        }
+        
+        formatarResultado();
+        // resultado.innerHTML += `${horas}:${minutos}:${segundos}`;
+        document.getElementById('contador').innerHTML = resultado;
         
     }, 1000)
 }

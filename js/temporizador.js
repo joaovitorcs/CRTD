@@ -13,7 +13,7 @@ function verificarHoras(n) {
 }
 
 function verificarMinutos(n) {
-    if (n >= 0 && n <= 60) {
+    if (n >= 0 && n <= 59) {
         return true;
     } else {
         return false;
@@ -21,7 +21,7 @@ function verificarMinutos(n) {
 }
 
 function verificarSegundos(n) {
-    if (n >= 0 && n <= 60) {
+    if (n >= 0 && n <= 59) {
         return true;
     } else {
         return false;
@@ -59,7 +59,13 @@ function iniciarContador() {
             if (segundos == -1) {
                 segundos = 59;
                 minutos--
-                if (horas = 1) {
+                if (horas == 1 && minutos == -1) {
+                    minutos = 59;
+                    horas--;
+                }
+
+                if (horas > 1 && minutos == -1) {
+                    horas--;
                     minutos = 59;
                 }
             }

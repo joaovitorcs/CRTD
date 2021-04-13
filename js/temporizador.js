@@ -44,6 +44,7 @@ function iniciarContador() {
                 zerarContador();
             }
         }else if (!verificarSegundos(segundos)){
+            alert('Valor Inválido! tente um valor entre 0 e 59')
             segundosStyle.style.background = 'red'
             zerarContador();
             segundos = 0;
@@ -54,6 +55,7 @@ function iniciarContador() {
                 horas--;
             }
         }else if(!verificarHoras(horas)){
+            alert('Valor Inválido! tente um valor entre 0 e 10')
             horasStyle.style.background = 'red'
             zerarContador();
             horas = 0;
@@ -74,6 +76,7 @@ function iniciarContador() {
                 }
             }
         }else if (!verificarMinutos(minutos)){
+            alert('Valor Inválido! tente um valor entre 0 e 59')
             minutosStyle.style.background = 'red'
             zerarContador();
             minutos = 0;

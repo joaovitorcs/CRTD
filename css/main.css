@@ -1,0 +1,62 @@
+:root{
+    --cor-background-1: #CCCCFF; /*Lavander Blue*/
+    --cor-background-2: #2A2A41; /*Space Cadet*/
+    --cor-principal-1: #676789; /*Dark Blue Gray*/
+    --cor-principal-2: #535371; /*Independence*/
+    --cor-texto-1: #101019; /*Rich Black FOGRA 29*/
+    --cor-texto-2: #EBEBFF; /*Lavander web*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 100%;
+    color: var(--cor-texto-2);
+}
+
+body{
+    background-color: var(--cor-background-1);
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    background-color: var(--cor-principal-1);
+    height: 500px;
+    width: 900px;
+    margin: 55px auto;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 6px var(--cor-background-2);
+    /* display: flex;
+    align-items: center;
+    justify-content: space-evenly; */
+}
+
+.container{
+    background-color: var(--cor-principal-2);
+}
+
+button{
+    height: 70px;
+    width: 180px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--cor-background-1);
+    outline: none;
+    font-size: 1.5rem;
+    transition: 200ms;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(27, 28, 92);
+
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-texto-1);
+}

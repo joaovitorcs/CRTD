@@ -3,6 +3,8 @@ let horasStyle = document.getElementById('horas');
 let minutosStyle = document.getElementById('minutos');
 let segundosStyle = document.getElementById('segundos');
 
+alert("Contagem regressiva! Digite as horas, minutos e segundos.")
+
 function verificarHoras(n) {
     if (n >= 0 && n <= 10) {
         return true;

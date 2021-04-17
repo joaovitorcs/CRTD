@@ -7,12 +7,11 @@
     <title>Cronômetro</title>
     <link rel="stylesheet" href="./css/cronometro.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/responsividade.css">
 </head>
 <body>
-    <div class="content">
-        <div class="container">
+    <div class="content cronometro">
+        <div class="container cronometro">
             <div id="buttons">
                 <button onclick="iniciarContador();" id="iniciar">Iniciar</button>
                 <button onclick="pausarContador();" id="pausar">Pausar</button>
@@ -21,7 +20,7 @@
             <div id="display">
                 <h1 id="contador">00:00:00</h1>
             </div>
-            <div class="tabs">
+            <div class="tabs cronometro">
                 <a href="./index.html">Menu</a>
                 <a href="./relogio.html">Relógio</a>
                 <a href="./temporizador.html">Temporizador</a>

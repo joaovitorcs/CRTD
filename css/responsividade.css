@@ -1,3 +1,4 @@
+/* Página index */
 @media (max-width: 900px){
     .content.index{
        width: 100vw;
@@ -14,5 +15,68 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (min-width: 1700px){
+    .content.index{
+       width: 1500px;
+       height: 1000px;
+       margin: 255px auto;
+    }
+    .container.index{
+        width: 800px;
+        height: 600px;
+    }
+
+    a{
+        height: 170px;
+        width: 280px;
+        font-size: 2.5rem;
+        padding: 65px;
+    }
+}
+
+/* Página relogio */
+@media (max-width: 900px){
+    .content.relogio{
+       width: 100vw;
+       height: 100vh;
+       margin: 0;
+       border-radius: 0;
+    }
+    .container.relogio{
+        width: 300px;
+        height: 400px;
+    }
+    .tabs.relogio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a{
+        padding: 0;
+    }
+}
+
+@media (min-width: 1700px){
+    .content.relogio{
+       width: 1500px;
+       height: 1000px;
+       margin: 255px auto;
+    }
+    .container.relogio{
+        width: 1250px;
+        height: 600px;
+    }
+
+    a{
+        margin: 20px;
+        height: 80px;
+        width: 250px;
+        font-size: 2.5rem;
+        padding: 10px;
     }
 }

@@ -13,6 +13,7 @@
     box-sizing: border-box;
     font-size: 100%;
     color: var(--cor-texto-2);
+    font-family: 'Roboto', sans-serif;
 }
 
 body{

@@ -5,7 +5,7 @@ let segundosStyle = document.getElementById('segundos');
 
 alert("Contagem regressiva! Digite as horas, minutos e segundos.")
 
-function verificarHoras(n) {
+function verificarHoras(n) { // verificando se o numero inserido está no intervalo determinado
     if (n >= 0 && n <= 10) {
         return true;
     } else {
@@ -35,6 +35,9 @@ function zerarContador(){
 
 function iniciarContador() {
     zerarContador();
+    horasStyle.style.background = '#fff';
+    minutosStyle.style.background = '#fff'
+    segundosStyle.style.background = '#fff';
     let horas = document.getElementById('horas').value;
     let minutos = document.getElementById('minutos').value;
     let segundos = document.getElementById('segundos').value;
@@ -47,7 +50,7 @@ function iniciarContador() {
             }
         }else if (!verificarSegundos(segundos)){
             alert('Valor Inválido! tente um valor entre 0 e 59')
-            segundosStyle.style.background = 'red'
+            segundosStyle.style.background = '#ec5353'
             zerarContador();
             segundos = 0;
         }
@@ -58,7 +61,7 @@ function iniciarContador() {
             }
         }else if(!verificarHoras(horas)){
             alert('Valor Inválido! tente um valor entre 0 e 10')
-            horasStyle.style.background = 'red'
+            horasStyle.style.background = '#ec5353'
             zerarContador();
             horas = 0;
         }
@@ -79,7 +82,7 @@ function iniciarContador() {
             }
         }else if (!verificarMinutos(minutos)){
             alert('Valor Inválido! tente um valor entre 0 e 59')
-            minutosStyle.style.background = 'red'
+            minutosStyle.style.background = '#ec5353'
             zerarContador();
             minutos = 0;
         }
